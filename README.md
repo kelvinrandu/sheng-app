@@ -1,1 +1,1 @@
-# sheng-mobile-app
+# sheng-app
