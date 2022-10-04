@@ -64,14 +64,8 @@ function Hit(props) {
   return (
     <article>
       <h1>
-        <Highlight attribute="title" hit={props.hit} />
-      </h1>
-      <p>
         <Highlight attribute="name" hit={props.hit} />
-      </p>
-      <p>
-        <Highlight attribute="description" hit={props.hit} />
-      </p>
+      </h1>
     </article>
   );
 }
