@@ -21,14 +21,8 @@ function App() {
     <div>
       <header className="header">
         <h1 className="header-title">
-          <a href="/">sheng-app</a>
+          <a href="/">sheng-dictionary</a>
         </h1>
-        <p className="header-subtitle">
-          using{' '}
-          <a href="https://github.com/algolia/react-instantsearch">
-            React InstantSearch
-          </a>
-        </p>
       </header>
 
       <div className="container">
@@ -36,8 +30,7 @@ function App() {
           <Configure hitsPerPage={8} />
           <div className="search-panel">
             <div className="search-panel__filters">
-              <DynamicWidgets fallbackWidget={RefinementList}>
-              </DynamicWidgets>
+              <DynamicWidgets fallbackWidget={RefinementList}></DynamicWidgets>
             </div>
 
             <div className="search-panel__results">
@@ -65,10 +58,13 @@ function Hit(props) {
     <article>
       <h1>
         <Highlight attribute="name" hit={props.hit} />
+        
       </h1>
+      <p> {props.hit.meaning}</p>
     </article>
   );
 }
+
 
 Hit.propTypes = {
   hit: PropTypes.object.isRequired,
